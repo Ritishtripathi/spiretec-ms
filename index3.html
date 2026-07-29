@@ -38,12 +38,14 @@
   --safe-b:env(safe-area-inset-bottom,0px);
 }
 *{box-sizing:border-box; margin:0; padding:0;}
-html{scroll-behavior:smooth;}
+html{scroll-behavior:smooth; overflow-x:hidden; width:100%;}
 body{
   background:var(--navy-950);
   color:var(--text-hi);
   font-family:var(--font-body);
   overflow-x:hidden;
+  width:100%;
+  max-width:100vw;
   -webkit-font-smoothing:antialiased;
   line-height:1.5;
 }
@@ -132,8 +134,9 @@ h2.head{font-family:var(--font-display); font-weight:600; font-size:clamp(28px,4
 }
 .pill i{color:var(--cyan); font-size:9px;}
 h1{
-  font-family:var(--font-display); font-weight:700; letter-spacing:-0.02em;word-spacing: 10px;
-  font-size:clamp(38px,5.6vw,66px); line-height:1.04;
+  font-family:var(--font-display); font-weight:700; letter-spacing:-0.02em;word-spacing: 6px;
+  font-size:clamp(32px,5.6vw,66px); line-height:1.1;
+  max-width:100%;
   opacity:0; transform:translateY(18px); animation:fadeUp .7s ease forwards;
 }
 h1 .grad{background:linear-gradient(100deg,var(--blue-2),var(--cyan) 60%,var(--violet)); -webkit-background-clip:text; background-clip:text; color:transparent;}
@@ -383,7 +386,10 @@ footer{position:relative; z-index:1; border-top:1px solid var(--line); padding:3
   .section{padding:72px 18px;}
   .why-grid{grid-template-columns:1fr 1fr;}
   .benefit-list{grid-template-columns:1fr;}
-  .foot-grid{grid-template-columns:1fr 1fr;}
+  .foot-grid{grid-template-columns:1fr; gap:32px;}
+  .footer-form-card{padding:24px 20px;}
+  .footer-form{grid-template-columns:1fr;}
+  .foot-bottom{flex-direction:column; text-align:center;}
   .fab{bottom:18px; right:16px; width:50px; height:50px; font-size:21px;}
   .form-fab{bottom:82px; right:16px; width:50px; height:50px; font-size:19px;}
   .cta-banner{padding:38px 26px; flex-direction:column; align-items:flex-start;}
@@ -393,6 +399,8 @@ footer{position:relative; z-index:1; border-top:1px solid var(--line); padding:3
   .why-card{padding:20px 16px;}
   h1{font-size:34px;}
   .stat-strip{grid-template-columns:1fr 1fr;}
+  .overlay{padding:14px;}
+  .modal{border-radius:20px; padding:26px 20px calc(20px + var(--safe-b)); max-height:85vh;}
 }
 </style>
 </head>
@@ -407,8 +415,8 @@ footer{position:relative; z-index:1; border-top:1px solid var(--line); padding:3
     <img src="https://www.spiretecsolutions.com/uploads/homepage/17652675231249782075.png" alt="SpireTec Solutions logo">
   </div>
   <nav class="nav-links">
-    <marquee behavior="alternate">
-      <a href=""><b>Get 20% discount on all courses</b></a>
+    <marquee>
+      <a href=""><b>Upskills Yourself, SpireTec Offers Up To 20%  Discount on All Courses</b></a>
     </marquee>
       
   </nav>
