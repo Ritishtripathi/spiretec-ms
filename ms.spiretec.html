@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Microsoft Certification Training | SpireTec Solutions</title>
 <meta name="description" content="Get Microsoft Certified with instructor-led live training from certified Microsoft trainers. Azure, Power BI, Security & AI. Book your free demo.">
-<link rel="icon" href="https://www.spiretecsolutions.com/uploads/homepage/17652675231249782075.png">
+<link rel="icon" href="https://www.spiretecsolutions.com/uploads/homepage/1718478123334127919.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -266,18 +266,18 @@ h1 .grad{background:linear-gradient(100deg,var(--blue-2),var(--cyan) 60%,var(--v
 .cat-work .cc-code{background:rgba(31,233,201,0.14); color:var(--cyan);}
 
 /* ============ WHY US ============ */
-.why-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:16px;}
+.why-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:14px;}
 .why-card{
-  background:var(--panel); border:1px solid var(--panel-brd); border-radius:16px; padding:26px 22px;
-  transition:transform .3s, border-color .3s;
+  display:flex; align-items:center; gap:12px;
+  background:linear-gradient(160deg,#f3efff 0%, #e8e1ff 100%); border:1px solid transparent; border-radius:14px; padding:18px 18px;
+  transition:transform .25s, border-color .25s, background .25s, box-shadow .25s;
 }
-.why-card:hover{transform:translateY(-5px); border-color:rgba(139,108,255,0.4);}
+.why-card:hover{transform:translateY(-3px); border-color:rgba(229,72,77,0.35); background:#ffffff; box-shadow:0 14px 30px -16px rgba(16,24,40,0.18);}
 .why-icon{
-  width:44px; height:44px; border-radius:12px; display:flex; align-items:center; justify-content:center;
-  background:linear-gradient(135deg,rgba(47,126,240,0.2),rgba(139,108,255,0.2)); color:var(--cyan); font-size:18px; margin-bottom:16px;
+  flex:none; width:34px; height:34px; border-radius:10px; display:flex; align-items:center; justify-content:center;
+  background:rgba(229,72,77,0.12); color:#e5484d; font-size:15px;
 }
-.why-card h3{font-family:var(--font-display); font-weight:600; font-size:16px; margin-bottom:6px;}
-.why-card p{font-size:13.5px; color:var(--text-mid); line-height:1.5;}
+.why-card h3{font-family:var(--font-display); font-weight:600; font-size:14.5px; letter-spacing:-0.01em;}
 
 /* ============ BENEFITS (split) ============ */
 .benefit-wrap{display:grid; grid-template-columns:0.9fr 1.1fr; gap:56px; align-items:center;}
@@ -404,7 +404,7 @@ footer{position:relative; z-index:1; border-top:1px solid var(--line); padding:3
 }
 @media (max-width: 480px){
   .why-grid{grid-template-columns:1fr 1fr; gap:12px;}
-  .why-card{padding:20px 16px;}
+  .why-card{padding:14px 14px;}
   h1{font-size:30px;}
   .stat-strip{grid-template-columns:1fr 1fr;}
   .overlay{padding:14px;}
@@ -544,7 +544,7 @@ footer{position:relative; z-index:1; border-top:1px solid var(--line); padding:3
   <div class="wrap">
     <div class="head-row reveal">
       <div>
-        <div class="eyebrow"><i class="fa-solid fa-circle"></i> Why SpireTec</div>
+        <div class="eyebrow"><i class="fa-solid fa-circle"></i> Why SpireTec Solutions</div>
         <h2 class="head">Built for outcomes, not attendance</h2>
         <p class="sub">Every element of our program is designed to get you certified — and hired.</p>
       </div>
@@ -831,16 +831,19 @@ grid.addEventListener('mousemove', e=>{
 
 /* ============ WHY US DATA ============ */
 const WHY = [
-  {icon:"fa-user-graduate", t:"Certified Microsoft Trainers", d:"Learn from MCTs with 20+ years of enterprise experience."},
-  {icon:"fa-flask", t:"Official Labs", d:"Real Azure sandbox environments for every module."},
-  {icon:"fa-diagram-project", t:"Real Industry Projects", d:"Build production-grade solutions during training."},
-  {icon:"fa-compass", t:"Career Guidance", d:"1:1 mentorship, resume reviews and interview preparation."},
+  {icon:"fa-user-graduate", t:"Certified Trainers"},
+  {icon:"fa-comments", t:"Highly Interactive Sessions"},
+  {icon:"fa-diagram-project", t:"Skill-based Training"},
+  {icon:"fa-certificate", t:"Certification Focus"},
+  {icon:"fa-calendar-days", t:"Flexible Schedule"},
+  {icon:"fa-sliders", t:"Tailored Solutions"},
+  {icon:"fa-headset", t:"Post Training Assistance"},
+  {icon:"fa-circle-play", t:"Access Recorded Sessions"},
 ];
 document.getElementById('whyGrid').innerHTML = WHY.map(w=>`
   <div class="why-card">
     <div class="why-icon"><i class="fa-solid ${w.icon}"></i></div>
     <h3>${w.t}</h3>
-    <p>${w.d}</p>
   </div>`).join('');
 
 
